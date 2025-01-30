@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export default function About() {
   const [opacity, setOpacity] = useState(1);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export default function Home() {
           <h1 className="text-2xl font-bold ml-4 tracking-wide text-blue-700">Saanal Suppliers Limited</h1>
         </div>
         <nav className="flex gap-6 text-lg">
-          <Link href="/about" className="hover:text-blue-600 transition duration-300">About Us</Link>
+          <Link href="/" className="hover:text-blue-600 transition duration-300">Home</Link>
           <a href="#services" className="hover:text-blue-600 transition duration-300">Services</a>
           <a href="#offerings" className="hover:text-blue-600 transition duration-300">Our Offerings</a>
           <a href="#contact" className="hover:text-blue-600 transition duration-300">Contact Us</a>
@@ -37,18 +37,21 @@ export default function Home() {
       {/* Main Content */}
       <main className="flex flex-col items-center sm:items-start text-center sm:text-left mt-24 px-8 sm:px-20 w-full flex-1">
         {/* Hero Section */}
-        <div className="relative w-full h-[600px] overflow-hidden rounded-lg shadow-lg bg-gradient-to-r from-blue-600 to-indigo-500">
+        <div className="relative w-full sm:w-full h-[600px] overflow-hidden rounded-lg shadow-lg bg-gradient-to-r from-blue-600 to-indigo-500">
           <Image
             src="/images/constructionn.jpeg"
             alt="Saanal Construction"
+            layout="intrinsic"
             width={1600}
             height={800}
+            objectFit="cover"
+            priority
             className="transition-opacity duration-1000 ease-in-out"
             style={{ opacity }}
           />
           <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
             <h2 className="text-4xl sm:text-5xl font-bold text-white text-center drop-shadow-lg">
-              Building Trust, Delivering Excellence
+              About Us
             </h2>
           </div>
         </div>
@@ -57,30 +60,17 @@ export default function Home() {
           At <span className="font-semibold text-blue-700">Saanal</span>, we are committed to providing top-tier construction services with unmatched expertise, ensuring your projects succeed from start to finish.
         </p>
 
-        <a
-          className="rounded-full bg-blue-600 text-white px-8 py-3 text-lg font-medium hover:bg-blue-700 transition-all duration-300 shadow-md mt-6"
-          href="#contact"
-        >
-          Get in Touch
-        </a>
-
-        {/* Our Offerings Section */}
-        <section id="offerings" className="mt-20 w-full">
-          <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center sm:text-left">Our Offerings</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-            {[
-              { img: "/images/civilworks.webp", title: "Civil Works", desc: "Quality infrastructure development for roads, bridges, and more." },
-              { img: "/images/electricworks.jpeg", title: "Electrical Works", desc: "Professional electrical installations and maintenance." },
-              { img: "/images/constructionworks.jpeg", title: "Building & Renovation", desc: "Residential and commercial building projects." },
-              { img: "/images/generalequipment.jpeg", title: "General Supplies", desc: "Reliable procurement and supply chain solutions." },
-              { img: "/images/interiordesign.jpeg", title: "Interior Design", desc: "Custom solutions tailored to unique project needs." },
-            ].map((offering, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
-                <Image src={offering.img} alt={offering.title} width={500} height={400} className="rounded-lg shadow-md" />
-                <h3 className="text-xl font-semibold text-gray-800 mt-4">{offering.title}</h3>
-                <p className="text-gray-600 mt-2">{offering.desc}</p>
-              </div>
-            ))}
+        <section className="mt-20 w-full">
+          <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center sm:text-left">Our Story</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold text-gray-800 mt-4">Our Mission</h3>
+              <p className="text-gray-600 mt-2">To deliver exceptional construction services that exceed our clients' expectations.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold text-gray-800 mt-4">Our Vision</h3>
+              <p className="text-gray-600 mt-2">To be the leading construction company in the region, known for our quality and reliability.</p>
+            </div>
           </div>
         </section>
       </main>
