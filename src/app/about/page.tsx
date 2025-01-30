@@ -64,7 +64,7 @@ export default function About() {
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-xl font-semibold text-gray-800 mt-4">Our Mission</h3>
               <p className="text-gray-600 mt-2">
-                To deliver exceptional construction services that exceed our clients&apos; expectations.
+                To deliver exceptional construction services that exceed our Client expectations.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6">
