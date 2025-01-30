@@ -28,25 +28,22 @@ export default function About() {
         </div>
         <nav className="flex gap-6 text-lg">
           <Link href="/" className="hover:text-blue-600 transition duration-300">Home</Link>
-          <a href="#services" className="hover:text-blue-600 transition duration-300">Services</a>
-          <a href="#offerings" className="hover:text-blue-600 transition duration-300">Our Offerings</a>
-          <a href="#contact" className="hover:text-blue-600 transition duration-300">Contact Us</a>
+          <Link href="/#services" className="hover:text-blue-600 transition duration-300">Services</Link>
+          <Link href="/#offerings" className="hover:text-blue-600 transition duration-300">Our Offerings</Link>
+          <Link href="/#contact" className="hover:text-blue-600 transition duration-300">Contact Us</Link>
         </nav>
       </header>
 
       {/* Main Content */}
       <main className="flex flex-col items-center sm:items-start text-center sm:text-left mt-24 px-8 sm:px-20 w-full flex-1">
         {/* Hero Section */}
-        <div className="relative w-full sm:w-full h-[600px] overflow-hidden rounded-lg shadow-lg bg-gradient-to-r from-blue-600 to-indigo-500">
+        <div className="relative w-full h-[600px] overflow-hidden rounded-lg shadow-lg bg-gradient-to-r from-blue-600 to-indigo-500">
           <Image
             src="/images/constructionn.jpeg"
             alt="Saanal Construction"
-            layout="intrinsic"
-            width={1600}
-            height={800}
-            objectFit="cover"
+            fill
             priority
-            className="transition-opacity duration-1000 ease-in-out"
+            className="object-cover transition-opacity duration-1000 ease-in-out"
             style={{ opacity }}
           />
           <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
@@ -60,16 +57,21 @@ export default function About() {
           At <span className="font-semibold text-blue-700">Saanal</span>, we are committed to providing top-tier construction services with unmatched expertise, ensuring your projects succeed from start to finish.
         </p>
 
+        {/* Our Story Section */}
         <section className="mt-20 w-full">
           <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center sm:text-left">Our Story</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-xl font-semibold text-gray-800 mt-4">Our Mission</h3>
-              <p className="text-gray-600 mt-2">To deliver exceptional construction services that exceed our clients' expectations.</p>
+              <p className="text-gray-600 mt-2">
+                To deliver exceptional construction services that exceed our clients&apos; expectations.
+              </p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-xl font-semibold text-gray-800 mt-4">Our Vision</h3>
-              <p className="text-gray-600 mt-2">To be the leading construction company in the region, known for our quality and reliability.</p>
+              <p className="text-gray-600 mt-2">
+                To be the leading construction company in the region, known for our quality and reliability.
+              </p>
             </div>
           </div>
         </section>
@@ -78,8 +80,8 @@ export default function About() {
       {/* Footer */}
       <footer className="w-full flex flex-col items-center gap-4 bg-blue-700 text-white py-8 mt-16">
         <div className="flex gap-6 text-lg">
-          <a href="#" className="hover:underline">Privacy Policy</a>
-          <a href="#" className="hover:underline">Terms of Service</a>
+          <Link href="/privacy" className="hover:underline">Privacy Policy</Link>
+          <Link href="/terms" className="hover:underline">Terms of Service</Link>
         </div>
         <p className="text-sm">&copy; 2025 Saanal. All rights reserved.</p>
       </footer>
