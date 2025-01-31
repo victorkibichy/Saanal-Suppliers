@@ -65,17 +65,21 @@ export default function Home() {
         </a>
 
         {/* Our Offerings Section */}
-        <section id="offerings" className="mt-20 w-full">
-          <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center sm:text-left">Our Offerings</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <section id="offerings" className="py-20 px-8 sm:px-20">
+          <h2 className="text-4xl font-bold text-gray-800 mb-12 text-center">Our Offerings</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
             {[
               { img: "/images/civilworks.webp", title: "Civil Works", desc: "Quality infrastructure development for roads, bridges, and more." },
               { img: "/images/electricworks.jpeg", title: "Electrical Works", desc: "Professional electrical installations and maintenance." },
               { img: "/images/constructionworks.jpeg", title: "Building & Renovation", desc: "Residential and commercial building projects." },
               { img: "/images/generalequipment.jpeg", title: "General Supplies", desc: "Reliable procurement and supply chain solutions." },
               { img: "/images/interiordesign.jpeg", title: "Interior Design", desc: "Custom solutions tailored to unique project needs." },
+              { img: "/images/Plumbing Projects.jpeg", title: "Plumbing Services", desc: "Expert plumbing solutions for residential and commercial projects." },
             ].map((offering, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+              <div 
+                key={index} 
+                className="group bg-white/90 backdrop-blur-md rounded-xl shadow-xl p-6 transform hover:scale-105 transition-transform duration-300 cursor-pointer"
+              >
                 <Image src={offering.img} alt={offering.title} width={500} height={400} className="rounded-lg shadow-md" />
                 <h3 className="text-xl font-semibold text-gray-800 mt-4">{offering.title}</h3>
                 <p className="text-gray-600 mt-2">{offering.desc}</p>
@@ -86,17 +90,20 @@ export default function Home() {
 
         {/* Recent Projects Section */}
         <section id="projects" className="mt-20 w-full">
-          <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center sm:text-left">Recent Projects</h2>
+          <h2 className="text-4xl font-bold text-gray-800 mb-12 text-center">Recent Projects</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {[
-              { img: "/images/Landscaping.avif", title: "Landscaping ", desc: "Successfully completed a modern landscaping." },
+              { img: "/images/Landscaping.avif", title: "Landscaping", desc: "Successfully completed a modern landscaping." },
               { img: "/images/Electricals Supply.jpeg", title: "Electricals Supply", desc: "Upgraded rural electrification with sustainable solutions." },
               { img: "/images/Construction Materials.jpeg", title: "Construction Materials", desc: "Supplying Construction Materials." },
               { img: "/images/Luxury Interior Design.webp", title: "Luxury Interior Design", desc: "Designed and furnished premium office spaces with modern aesthetics." },
               { img: "/images/Glassware Products.jpeg", title: "Glassware Products", desc: "Supply of Glass and glass materials." },
               { img: "/images/Plumbing Projects.jpeg", title: "Plumbing Projects", desc: "Installed smart Plumbing Systems." },
             ].map((project, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+              <div 
+                key={index} 
+                className="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 cursor-pointer"
+              >
                 <Image src={project.img} alt={project.title} width={500} height={400} className="rounded-lg shadow-md" />
                 <h3 className="text-xl font-semibold text-gray-800 mt-4">{project.title}</h3>
                 <p className="text-gray-600 mt-2">{project.desc}</p>
@@ -107,13 +114,20 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="w-full flex flex-col items-center gap-4 bg-blue-700 text-white py-8 mt-16">
-        <div className="flex gap-6 text-lg">
-          <a href="#" className="hover:underline">Privacy Policy</a>
-          <a href="#" className="hover:underline">Terms of Service</a>
-        </div>
-        <p className="text-sm">&copy; 2025 Saanal. All rights reserved.</p>
-      </footer>
+      {/* Footer */}
+<footer className="w-full flex flex-col items-center gap-4 bg-blue-700 text-white py-8 mt-16">
+  <div className="flex gap-6 text-lg">
+    <a href="#" className="hover:underline">Privacy Policy</a>
+    <a href="#" className="hover:underline">Terms of Service</a>
+  </div>
+  <p className="text-sm">&copy; 2025 Saanal. All rights reserved.</p>
+  
+  {/* Contact Email */}
+  <a href="mailto:saanalsuppliers@gmail.com" className="text-white text-lg font-semibold hover:underline transition duration-300">
+    saanalsuppliers@gmail.com
+  </a>
+</footer>
+
     </div>
   );
 }

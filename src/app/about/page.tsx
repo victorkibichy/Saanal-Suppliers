@@ -100,9 +100,9 @@ export default function About() {
           <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center sm:text-left">Meet Our Team</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {[
-              { img: "/images/ceo.jpg", name: "Joan Rono", role: "CEO & Founder" },
-              { img: "/images/manager.jpg", name: "Jane Doe", role: "Operations Manager" },
-              { img: "/images/engineer.jpg", name: "John Smith", role: "Chief Engineer" },
+              { img: "/images/joanrono.jpeg", name: "Joan Rono", role: "CEO & Founder" },
+              { img: "/images/person.svg", name: "Manager", role: "Operations Manager" },
+              { img: "/images/person.svg", name: "Eng. Engineer", role: "Chief Engineer" },
             ].map((member, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
                 <Image src={member.img} alt={member.name} width={150} height={150} className="rounded-full shadow-md" />
