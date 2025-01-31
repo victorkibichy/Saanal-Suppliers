@@ -28,9 +28,9 @@ export default function About() {
         </div>
         <nav className="flex gap-6 text-lg">
           <Link href="/" className="hover:text-blue-600 transition duration-300">Home</Link>
-          <a href="#services" className="hover:text-blue-600 transition duration-300">Services</a>
-          <a href="#offerings" className="hover:text-blue-600 transition duration-300">Our Offerings</a>
-          <a href="#contact" className="hover:text-blue-600 transition duration-300">Contact Us</a>
+          <Link href="/#services" className="hover:text-blue-600 transition duration-300">Services</Link>
+          <Link href="/#offerings" className="hover:text-blue-600 transition duration-300">Our Offerings</Link>
+          <Link href="/#contact" className="hover:text-blue-600 transition duration-300">Contact Us</Link>
         </nav>
       </header>
 
@@ -56,24 +56,60 @@ export default function About() {
           </div>
         </div>
 
-        <p className="text-lg text-gray-700 max-w-3xl mt-6 text-center sm:text-left leading-relaxed">
-          At <span className="font-semibold text-blue-700">Saanal</span>, we are committed to providing top-tier construction services with unmatched expertise, ensuring your projects succeed from start to finish.
-        </p>
-
-        <section className="mt-20 w-full">
+        {/* About Section */}
+        <section className="mt-16 w-full">
           <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center sm:text-left">Our Story</h2>
+          <p className="text-lg text-gray-700 max-w-3xl leading-relaxed">
+            Founded in <span className="font-bold text-blue-700">2013</span>, <span className="font-semibold text-blue-700">Saanal Suppliers Ltd</span> has been at the forefront of providing top-tier construction, electrical works, and general supplies. Our commitment to excellence and integrity has earned us the trust of clients across various industries.
+          </p>
+        </section>
+
+        {/* Mission & Vision */}
+        <section className="mt-16 w-full">
+          <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center sm:text-left">Our Mission & Vision</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-800 mt-4">Our Mission</h3>
-              {/* Fixed apostrophe issue */}
+              <h3 className="text-xl font-semibold text-gray-800">Our Mission</h3>
               <p className="text-gray-600 mt-2">
-                To deliver exceptional construction services that exceed our clients&apos; expectations.
+                To deliver exceptional construction, electrical, and supply services that exceed our clients&apos; expectations, ensuring sustainability, quality, and efficiency.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-800 mt-4">Our Vision</h3>
-              <p className="text-gray-600 mt-2">To be the leading construction company in the region, known for our quality and reliability.</p>
+              <h3 className="text-xl font-semibold text-gray-800">Our Vision</h3>
+              <p className="text-gray-600 mt-2">
+                To be the leading construction and supply company in the region, recognized for our commitment to quality, innovation, and customer satisfaction.
+              </p>
             </div>
+          </div>
+        </section>
+
+        {/* Core Values */}
+        <section className="mt-16 w-full">
+          <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center sm:text-left">Our Core Values</h2>
+          <ul className="list-disc pl-6 text-lg text-gray-700 max-w-3xl leading-relaxed">
+            <li><span className="font-semibold text-blue-700">Integrity:</span> We uphold transparency and honesty in all our dealings.</li>
+            <li><span className="font-semibold text-blue-700">Quality:</span> We prioritize excellence in every project we undertake.</li>
+            <li><span className="font-semibold text-blue-700">Innovation:</span> We embrace new technologies and methodologies to enhance efficiency.</li>
+            <li><span className="font-semibold text-blue-700">Customer Satisfaction:</span> Our clients&apos; needs and expectations drive our success.</li>
+            <li><span className="font-semibold text-blue-700">Sustainability:</span> We are committed to eco-friendly and sustainable practices.</li>
+          </ul>
+        </section>
+
+        {/* Team Overview */}
+        <section className="mt-16 w-full">
+          <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center sm:text-left">Meet Our Team</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            {[
+              { img: "/images/ceo.jpg", name: "Joan Rono", role: "CEO & Founder" },
+              { img: "/images/manager.jpg", name: "Jane Doe", role: "Operations Manager" },
+              { img: "/images/engineer.jpg", name: "John Smith", role: "Chief Engineer" },
+            ].map((member, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+                <Image src={member.img} alt={member.name} width={150} height={150} className="rounded-full shadow-md" />
+                <h3 className="text-xl font-semibold text-gray-800 mt-4">{member.name}</h3>
+                <p className="text-gray-600 mt-2">{member.role}</p>
+              </div>
+            ))}
           </div>
         </section>
       </main>
