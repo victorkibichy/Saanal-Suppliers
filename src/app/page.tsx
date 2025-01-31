@@ -30,7 +30,8 @@ export default function Home() {
           <Link href="/about" className="hover:text-blue-600 transition duration-300">About Us</Link>
           <a href="#services" className="hover:text-blue-600 transition duration-300">Services</a>
           <a href="#offerings" className="hover:text-blue-600 transition duration-300">Our Offerings</a>
-          <a href="#contact" className="hover:text-blue-600 transition duration-300">Contact Us</a>
+          {/* Updated to use Link component for client-side navigation */}
+          <Link href="/contact" className="hover:text-blue-600 transition duration-300">Contact Us</Link>
         </nav>
       </header>
 
@@ -69,7 +70,7 @@ export default function Home() {
             className="rounded-full bg-green-600 text-white px-8 py-3 text-lg font-medium hover:bg-green-700 transition-all duration-300 shadow-md"
             href="/quote"
           >
-            Request a Quote.
+            Request a Quote
           </Link>
         </div>
 
