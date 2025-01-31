@@ -83,6 +83,27 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        {/* Recent Projects Section */}
+        <section id="projects" className="mt-20 w-full">
+          <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center sm:text-left">Recent Projects</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            {[
+              { img: "/images/Landscaping.avif", title: "Landscaping ", desc: "Successfully completed a modern landscaping." },
+              { img: "/images/Electricals Supply.jpeg", title: "Electricals Supply", desc: "Upgraded rural electrification with sustainable solutions." },
+              { img: "/images/Construction Materials.jpeg", title: "Construction Materials", desc: "Supplying Construction Materials." },
+              { img: "/images/Luxury Interior Design.webp", title: "Luxury Interior Design", desc: "Designed and furnished premium office spaces with modern aesthetics." },
+              { img: "/images/Glassware Products.jpeg", title: "Glassware Products", desc: "Supply of Glass and glass materials." },
+              { img: "/images/Plumbing Projects.jpeg", title: "Plumbing Projects", desc: "Installed smart Plumbing Systems." },
+            ].map((project, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                <Image src={project.img} alt={project.title} width={500} height={400} className="rounded-lg shadow-md" />
+                <h3 className="text-xl font-semibold text-gray-800 mt-4">{project.title}</h3>
+                <p className="text-gray-600 mt-2">{project.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
 
       {/* Footer */}
