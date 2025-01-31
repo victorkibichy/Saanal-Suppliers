@@ -57,12 +57,21 @@ export default function Home() {
           At <span className="font-semibold text-blue-700">Saanal</span>, we are committed to providing top-tier construction services with unmatched expertise, ensuring your projects succeed from start to finish.
         </p>
 
-        <a
-          className="rounded-full bg-blue-600 text-white px-8 py-3 text-lg font-medium hover:bg-blue-700 transition-all duration-300 shadow-md mt-6"
-          href="#contact"
-        >
-          Get in Touch
-        </a>
+        {/* Button Container */}
+        <div className="flex justify-center gap-6 mt-6">
+          <a
+            className="rounded-full bg-blue-600 text-white px-8 py-3 text-lg font-medium hover:bg-blue-700 transition-all duration-300 shadow-md"
+            href="#contact"
+          >
+            Get in Touch
+          </a>
+          <Link
+            className="rounded-full bg-green-600 text-white px-8 py-3 text-lg font-medium hover:bg-green-700 transition-all duration-300 shadow-md"
+            href="/quote"
+          >
+            Request a Quote.
+          </Link>
+        </div>
 
         {/* Our Offerings Section */}
         <section id="offerings" className="py-20 px-8 sm:px-20">
@@ -114,20 +123,18 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      {/* Footer */}
-<footer className="w-full flex flex-col items-center gap-4 bg-blue-700 text-white py-8 mt-16">
-  <div className="flex gap-6 text-lg">
-    <a href="#" className="hover:underline">Privacy Policy</a>
-    <a href="#" className="hover:underline">Terms of Service</a>
-  </div>
-  <p className="text-sm">&copy; 2025 Saanal. All rights reserved.</p>
-  
-  {/* Contact Email */}
-  <a href="mailto:saanalsuppliers@gmail.com" className="text-white text-lg font-semibold hover:underline transition duration-300">
-    saanalsuppliers@gmail.com
-  </a>
-</footer>
-
+      <footer className="w-full flex flex-col items-center gap-4 bg-blue-700 text-white py-8 mt-16">
+        <div className="flex gap-6 text-lg">
+          <a href="#" className="hover:underline">Privacy Policy</a>
+          <a href="#" className="hover:underline">Terms of Service</a>
+        </div>
+        <p className="text-sm">&copy; 2025 Saanal. All rights reserved.</p>
+        
+        {/* Contact Email */}
+        <a href="mailto:saanalsuppliers@gmail.com" className="text-white text-lg font-semibold hover:underline transition duration-300">
+          saanalsuppliers@gmail.com
+        </a>
+      </footer>
     </div>
   );
 }
